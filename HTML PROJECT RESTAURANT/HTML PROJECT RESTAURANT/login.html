@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="/css/register.css">
+    <link rel="shortcut icon" href="img/login favicon.png" type="image/x-icon">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+*{
+    margin: 8px;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    font-size:30px;
+    text-align: center;
+}
+body{
+    background-color: #c9d6ff;
+    background: linear-gradient(to right, #e2e2e2, #c9d6ff);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+}
+.register p{
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0.3px;
+    margin: 20px 0;
+}
+.register{
+    background-color: #fff;
+    border-radius: 30px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
+    position: relative;
+    overflow: hidden;
+    width: 768px;
+    max-width: 100%;
+    min-height: 480px;
+}
+.register span{
+    font-size: 12px;
+}
+.register button{
+    background-color: #512da8;
+    color: #fff;
+    font-size: 12px;
+    padding: 10px 45px;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+
+.register button.hidden{
+    background-color: transparent;
+    border-color: #fff;
+}
+
+.register.active form{
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 40px;
+    height: 100%;
+}
+
+.register input{
+    background-color: #eee;
+    border: none;
+    margin: 0px 0;
+    padding: 15px 15px;
+    font-size: 17px;
+    border-radius: 10px;
+    /* width: 0; */
+    outline: none;
+}
+
+.form-register{
+    position: absolute;
+    top: 0;
+    height: 100%;
+    transition: all 0.6s ease-in-out;
+}
+
+.sign-in{
+    left: 0;
+    width: 50%;
+    z-index: 2;
+}
+
+.register.active .sign-in{
+    transform: translateX(100%);
+}
+
+.sign-up{
+    left: 0;
+    width: 50%;
+    opacity: 0;
+    z-index: 1;
+}
+
+.register.active .sign-up{
+    transform: translateX(100%);
+    opacity: 1;
+    z-index: 5;
+    animation: move 0.6s;
+}
+.register a{
+    color: #333;
+    font-size: 20px;
+    text-decoration: none;
+    margin: 15px 0 10px;
+}
+.register label{
+    color: #333;
+    font-size: 15px;
+    text-decoration: none;
+    margin: 15px  0px;
+    
+}
+</style>
+</head>
+
+
+
+<body>
+    <script>
+        function validate() {
+            
+            alert("Server is not active!!")
+        }
+    </script>
+    <div class="register">
+        <b><header>Login</header></b>
+        <form action="backend.php" name="myform" method="post" onsubmit="return validate()">
+            <input class="input" type="email" name="name" placeholder="Enter your email"> </br> </br>
+            <input class="input" type="password" name="password" placeholder="Enter your password"> </br></br>
+            <input type="checkbox" name="checkbox" id="check1">
+            <label for="check" class="text">Remember password</label> <br><br>
+            <input type="submit" class="button" value="Login"> <br> <br>
+            <b><a href="#">Forgot Password?</a></b> <br>
+            <b><span class="text">Don't have an account?</b>
+                <a href="register.html" class="text login-link">Signup</a> <br> <br>
+        </form>
+    </div>
+</body>
+
+</html>
